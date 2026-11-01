@@ -101,7 +101,7 @@ Learn → Practice → Build → Test → Debug → Document → Commit → Impr
 
 ## 👨‍💻 Author
 
-### Syed Abdul Qayum
+### Engg.Sayed Abdul Qayum
 
 **Aspiring DevOps Engineer** | Building skills in **Linux, Shell Scripting, AWS, Git, CI/CD, Docker, Terraform, Ansible and Kubernetes**.
 
