@@ -1,16 +1,46 @@
-
 pipeline {
-    agent any
-
-    options {
-        skipDefaultCheckout(true)
-        timestamps()
+    agent {
+        node {
+            label 'built-in'
+            customWorkspace '/var/lib/jenkins/workspace/CI-Pipeline-WorkFlow-Test'
+        }
     }
 
-    environment {
-        REPO_URL = 'https://github.com/Engg-Sayed-Abdul-Qayum/Project-Annual-Attendance-Record.git'
-        BRANCH = 'main'
+    stages {
+        stage('Jenkins Shell Diagnostic') {
+            steps {
+                sh '''
+                    echo "Shell execution successful"
+                    echo "===== USER ====="
+                    whoami
+
+                    echo "===== WORKSPACE ====="
+                    pwd
+
+                    echo "===== DATE ====="
+                    date
+                '''
+            }
+        }
     }
+}
+
+
+
+
+
+// pipeline {
+    // agent any
+
+    // options {
+    //     skipDefaultCheckout(true)
+    //     timestamps()
+    // }
+
+    // environment {
+    //     REPO_URL = 'https://github.com/Engg-Sayed-Abdul-Qayum/Project-Annual-Attendance-Record.git'
+    //     BRANCH = 'main'
+    // }
 
     stages {
 
