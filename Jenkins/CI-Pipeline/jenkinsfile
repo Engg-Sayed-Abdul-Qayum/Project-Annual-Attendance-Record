@@ -14,6 +14,19 @@ pipeline {
 
     stages {
 
+        
+        stage('Jenkins Shell Diagnostic') {
+    steps {
+        sh '''
+            echo "Shell execution successful"
+            whoami
+            pwd
+            date
+        '''
+    }
+}
+        
+        
         // Stage 1: Git Checkout
         stage('Git Checkout') {
             steps {
